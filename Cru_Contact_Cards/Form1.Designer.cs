@@ -163,6 +163,7 @@
             this.tboOther.Name = "tboOther";
             this.tboOther.Size = new System.Drawing.Size(100, 20);
             this.tboOther.TabIndex = 15;
+            this.tboOther.TextChanged += new System.EventHandler(this.tboOther_TextChanged);
             // 
             // chkOther
             // 
@@ -184,6 +185,7 @@
             this.chkUndecided.TabIndex = 14;
             this.chkUndecided.Text = "Undecided";
             this.chkUndecided.UseVisualStyleBackColor = true;
+            this.chkUndecided.CheckedChanged += new System.EventHandler(this.chkUndecided_CheckedChanged);
             // 
             // chkAgnostic
             // 
@@ -194,6 +196,7 @@
             this.chkAgnostic.TabIndex = 14;
             this.chkAgnostic.Text = "Agnostic";
             this.chkAgnostic.UseVisualStyleBackColor = true;
+            this.chkAgnostic.CheckedChanged += new System.EventHandler(this.chkAgnostic_CheckedChanged);
             // 
             // chkAtheist
             // 
@@ -204,6 +207,7 @@
             this.chkAtheist.TabIndex = 14;
             this.chkAtheist.Text = "Atheist";
             this.chkAtheist.UseVisualStyleBackColor = true;
+            this.chkAtheist.CheckedChanged += new System.EventHandler(this.chkAtheist_CheckedChanged);
             // 
             // chkTaoist
             // 
@@ -214,6 +218,7 @@
             this.chkTaoist.TabIndex = 5;
             this.chkTaoist.Text = "Taoist";
             this.chkTaoist.UseVisualStyleBackColor = true;
+            this.chkTaoist.CheckedChanged += new System.EventHandler(this.chkTaoist_CheckedChanged);
             // 
             // chkHindu
             // 
@@ -224,6 +229,7 @@
             this.chkHindu.TabIndex = 4;
             this.chkHindu.Text = "Hindu";
             this.chkHindu.UseVisualStyleBackColor = true;
+            this.chkHindu.CheckedChanged += new System.EventHandler(this.chkHindu_CheckedChanged);
             // 
             // chkBuddhist
             // 
@@ -234,6 +240,7 @@
             this.chkBuddhist.TabIndex = 3;
             this.chkBuddhist.Text = "Buddhist";
             this.chkBuddhist.UseVisualStyleBackColor = true;
+            this.chkBuddhist.CheckedChanged += new System.EventHandler(this.chkBuddhist_CheckedChanged);
             // 
             // chkJewish
             // 
@@ -244,6 +251,7 @@
             this.chkJewish.TabIndex = 2;
             this.chkJewish.Text = "Jewish";
             this.chkJewish.UseVisualStyleBackColor = true;
+            this.chkJewish.CheckedChanged += new System.EventHandler(this.chkJewish_CheckedChanged);
             // 
             // chkMuslim
             // 
@@ -254,6 +262,7 @@
             this.chkMuslim.TabIndex = 1;
             this.chkMuslim.Text = "Muslim";
             this.chkMuslim.UseVisualStyleBackColor = true;
+            this.chkMuslim.CheckedChanged += new System.EventHandler(this.chkMuslim_CheckedChanged);
             // 
             // chkChristian
             // 
@@ -264,6 +273,7 @@
             this.chkChristian.TabIndex = 0;
             this.chkChristian.Text = "Christian";
             this.chkChristian.UseVisualStyleBackColor = true;
+            this.chkChristian.CheckedChanged += new System.EventHandler(this.chkChristian_CheckedChanged);
             // 
             // grpRelationship
             // 
@@ -324,6 +334,7 @@
             this.rdoNo.TabStop = true;
             this.rdoNo.Text = "No";
             this.rdoNo.UseVisualStyleBackColor = true;
+            this.rdoNo.CheckedChanged += new System.EventHandler(this.rdoNo_CheckedChanged);
             // 
             // rdoMaybe
             // 
@@ -335,6 +346,7 @@
             this.rdoMaybe.TabStop = true;
             this.rdoMaybe.Text = "Maybe";
             this.rdoMaybe.UseVisualStyleBackColor = true;
+            this.rdoMaybe.CheckedChanged += new System.EventHandler(this.rdoMaybe_CheckedChanged);
             // 
             // rdoYes
             // 
@@ -346,6 +358,7 @@
             this.rdoYes.TabStop = true;
             this.rdoYes.Text = "Yes";
             this.rdoYes.UseVisualStyleBackColor = true;
+            this.rdoYes.CheckedChanged += new System.EventHandler(this.rdoYes_CheckedChanged);
             // 
             // grpCruInfo
             // 
@@ -369,6 +382,7 @@
             this.rdoCruNo.TabStop = true;
             this.rdoCruNo.Text = "No";
             this.rdoCruNo.UseVisualStyleBackColor = true;
+            this.rdoCruNo.CheckedChanged += new System.EventHandler(this.rdoCruNo_CheckedChanged);
             // 
             // rdoCruMaybe
             // 
@@ -380,6 +394,7 @@
             this.rdoCruMaybe.TabStop = true;
             this.rdoCruMaybe.Text = "Maybe";
             this.rdoCruMaybe.UseVisualStyleBackColor = true;
+            this.rdoCruMaybe.CheckedChanged += new System.EventHandler(this.rdoCruMaybe_CheckedChanged);
             // 
             // rdoCruYes
             // 
@@ -391,6 +406,7 @@
             this.rdoCruYes.TabStop = true;
             this.rdoCruYes.Text = "Yes";
             this.rdoCruYes.UseVisualStyleBackColor = true;
+            this.rdoCruYes.CheckedChanged += new System.EventHandler(this.rdoCruYes_CheckedChanged);
             // 
             // tboName
             // 
@@ -483,6 +499,7 @@
             this.tboRaceOther.Name = "tboRaceOther";
             this.tboRaceOther.Size = new System.Drawing.Size(100, 20);
             this.tboRaceOther.TabIndex = 6;
+            this.tboRaceOther.TextChanged += new System.EventHandler(this.tboRaceOther_TextChanged);
             // 
             // chkRaceOther
             // 
@@ -504,6 +521,7 @@
             this.chkAsian.TabIndex = 4;
             this.chkAsian.Text = "Asian / Pacific Islander";
             this.chkAsian.UseVisualStyleBackColor = true;
+            this.chkAsian.CheckedChanged += new System.EventHandler(this.chkAsian_CheckedChanged);
             // 
             // chkNative
             // 
@@ -514,6 +532,7 @@
             this.chkNative.TabIndex = 3;
             this.chkNative.Text = "Native American or American Indian";
             this.chkNative.UseVisualStyleBackColor = true;
+            this.chkNative.CheckedChanged += new System.EventHandler(this.chkNative_CheckedChanged);
             // 
             // chkHispanic
             // 
@@ -524,6 +543,7 @@
             this.chkHispanic.TabIndex = 2;
             this.chkHispanic.Text = "Hispanic or Latino";
             this.chkHispanic.UseVisualStyleBackColor = true;
+            this.chkHispanic.CheckedChanged += new System.EventHandler(this.chkHispanic_CheckedChanged);
             // 
             // chkBlack
             // 
@@ -534,6 +554,7 @@
             this.chkBlack.TabIndex = 1;
             this.chkBlack.Text = "Black or African American";
             this.chkBlack.UseVisualStyleBackColor = true;
+            this.chkBlack.CheckedChanged += new System.EventHandler(this.chkBlack_CheckedChanged);
             // 
             // chkWhite
             // 
@@ -544,6 +565,7 @@
             this.chkWhite.TabIndex = 0;
             this.chkWhite.Text = "White";
             this.chkWhite.UseVisualStyleBackColor = true;
+            this.chkWhite.CheckedChanged += new System.EventHandler(this.chkWhite_CheckedChanged);
             // 
             // lblGender
             // 
