@@ -13,6 +13,10 @@ namespace Cru_Contact_Cards
     public partial class CruContactCard : Form
     {
         //TODO: Figure out what I want btnDone to do
+        RadioButton currentReligion;
+        RadioButton currentRace;
+        RadioButton currentCru;
+        RadioButton currentConvo;
         private string religion;
         private string race;
         private string cruInfo;
@@ -27,58 +31,79 @@ namespace Cru_Contact_Cards
         {
             Contact newContact = new Contact(tboName.Text, cboGrade.SelectedItem.ToString(), cboGender.SelectedItem.ToString(),
                 cboResidence.SelectedItem.ToString(), tboRoom.ToString(), religion, race, trkRelationship.Value, cruInfo, convo);
+            tboName.Text = "";
+            cboGender.Text = "";
+            cboGrade.Text = "";
+            cboResidence.Text = "";
+            tboRoom.Text = "";
+            tboOther.Text = "";
+            tboRaceOther.Text = "";
+            trkRelationship.Value = 0;
+            currentReligion.Checked = false;
+            currentRace.Checked = false;
+            currentCru.Checked = false;
+            currentConvo.Checked = false;
         }
 
-        #region ---Relation Interactables---
+        #region ---Religion Interactables---
 
-        private void chkChristian_CheckedChanged(object sender, EventArgs e)
+        private void rdoChristian_CheckedChanged(object sender, EventArgs e)
         {
-            this.religion = "Christian";
+            religion = "Christian";
+            currentReligion = rdoChristian;
         }
 
-        private void chkMuslim_CheckedChanged(object sender, EventArgs e)
+        private void rdoMuslim_CheckedChanged(object sender, EventArgs e)
         {
-            this.religion = "Muslim";
+            religion = "Muslim";
+            currentReligion = rdoMuslim;
         }
 
-        private void chkJewish_CheckedChanged(object sender, EventArgs e)
+        private void rdoJewish_CheckedChanged(object sender, EventArgs e)
         {
-            this.religion = "Jewish";
+            religion = "Jewish";
+            currentReligion = rdoJewish;
         }
 
-        private void chkBuddhist_CheckedChanged(object sender, EventArgs e)
+        private void rdoBuddhist_CheckedChanged(object sender, EventArgs e)
         {
-            this.religion = "Buddhist";
+            religion = "Buddhist";
+            currentReligion = rdoBuddhist;
         }
 
-        private void chkHindu_CheckedChanged(object sender, EventArgs e)
+        private void rdoHindu_CheckedChanged(object sender, EventArgs e)
         {
-            this.religion = "Hindu";
+            religion = "Hindu";
+            currentReligion = rdoHindu;
         }
 
-        private void chkTaoist_CheckedChanged(object sender, EventArgs e)
+        private void rdoTaoist_CheckedChanged(object sender, EventArgs e)
         {
-            this.religion = "Taoist";
+            religion = "Taoist";
+            currentReligion = rdoTaoist;
         }
 
-        private void chkAtheist_CheckedChanged(object sender, EventArgs e)
+        private void rdoAtheist_CheckedChanged(object sender, EventArgs e)
         {
-            this.religion = "Atheist";
+            religion = "Atheist";
+            currentReligion = rdoAtheist;
         }
 
-        private void chkAgnostic_CheckedChanged(object sender, EventArgs e)
+        private void rdoAgnostic_CheckedChanged(object sender, EventArgs e)
         {
-            this.religion = "Agnostic";
+            religion = "Agnostic";
+            currentReligion = rdoAgnostic;
         }
 
-        private void chkUndecided_CheckedChanged(object sender, EventArgs e)
+        private void rdoUndecided_CheckedChanged(object sender, EventArgs e)
         {
-            this.religion = "Undecided";
+            religion = "Undecided";
+            currentReligion = rdoUndecided;
         }
 
-        private void chkOther_CheckedChanged(object sender, EventArgs e)
+        private void rdoOther_CheckedChanged(object sender, EventArgs e)
         {
-            tboOther.Enabled = !tboOther.Enabled;
+            tboOther.Enabled = rdoOther.Checked;
         }
 
         private void tboOther_TextChanged(object sender, EventArgs e)
@@ -91,34 +116,40 @@ namespace Cru_Contact_Cards
 
         #region ---Race Interactables---
 
-        private void chkWhite_CheckedChanged(object sender, EventArgs e)
+        private void rdoWhite_CheckedChanged(object sender, EventArgs e)
         {
-            this.race = "White";
+            race = "White / Caucasian";
+            currentRace = rdoWhite;
         }
 
-        private void chkBlack_CheckedChanged(object sender, EventArgs e)
+        private void rdoBlack_CheckedChanged(object sender, EventArgs e)
         {
-            this.race = "Black";
+            race = "Black / African American";
+            currentRace = rdoBlack;
         }
 
-        private void chkHispanic_CheckedChanged(object sender, EventArgs e)
+        private void rdoHispanic_CheckedChanged(object sender, EventArgs e)
         {
-            this.race = "Hispanic";
+            race = "Black / African American";
+            currentRace = rdoHispanic;
         }
 
-        private void chkNative_CheckedChanged(object sender, EventArgs e)
+        private void rdoNative_CheckedChanged(object sender, EventArgs e)
         {
-            this.race = "Native American";
+            race = "Native American / American Indian";
+            currentRace = rdoNative;
         }
 
-        private void chkAsian_CheckedChanged(object sender, EventArgs e)
+        private void rdoAsian_CheckedChanged(object sender, EventArgs e)
         {
-            this.race = "Asian";
+            race = "Asian / Pacific Islander";
+            currentRace = rdoAsian;
         }
 
-        private void chkRaceOther_CheckedChanged(object sender, EventArgs e)
+        private void rdoRaceOther_CheckedChanged(object sender, EventArgs e)
         {
-            tboRaceOther.Enabled = !tboRaceOther.Enabled;
+            tboRaceOther.Enabled = rdoRaceOther.Checked;
+            currentRace = rdoOther;
         }
 
         private void tboRaceOther_TextChanged(object sender, EventArgs e)
@@ -134,16 +165,19 @@ namespace Cru_Contact_Cards
         private void rdoCruYes_CheckedChanged(object sender, EventArgs e)
         {
             this.cruInfo = "Yes";
+            currentCru = rdoCruYes;
         }
 
         private void rdoCruMaybe_CheckedChanged(object sender, EventArgs e)
         {
             this.cruInfo = "Maybe";
+            currentCru = rdoCruMaybe;
         }
 
         private void rdoCruNo_CheckedChanged(object sender, EventArgs e)
         {
             this.cruInfo = "No";
+            currentCru = rdoCruNo;
         }
 
         #endregion
@@ -153,16 +187,19 @@ namespace Cru_Contact_Cards
         private void rdoYes_CheckedChanged(object sender, EventArgs e)
         {
             this.convo = "Yes";
+            currentConvo = rdoYes;
         }
 
         private void rdoMaybe_CheckedChanged(object sender, EventArgs e)
         {
             this.convo = "Maybe";
+            currentConvo = rdoMaybe;
         }
 
         private void rdoNo_CheckedChanged(object sender, EventArgs e)
         {
             this.convo = "No";
+            currentConvo = rdoNo;
         }
 
         #endregion

@@ -35,17 +35,17 @@
             this.lblGrade = new System.Windows.Forms.Label();
             this.lblRoom = new System.Windows.Forms.Label();
             this.grpAffiliation = new System.Windows.Forms.GroupBox();
+            this.rdoOther = new System.Windows.Forms.RadioButton();
+            this.rdoUndecided = new System.Windows.Forms.RadioButton();
+            this.rdoAgnostic = new System.Windows.Forms.RadioButton();
+            this.rdoAtheist = new System.Windows.Forms.RadioButton();
+            this.rdoTaoist = new System.Windows.Forms.RadioButton();
+            this.rdoHindu = new System.Windows.Forms.RadioButton();
+            this.rdoBuddhist = new System.Windows.Forms.RadioButton();
+            this.rdoJewish = new System.Windows.Forms.RadioButton();
+            this.rdoMuslim = new System.Windows.Forms.RadioButton();
+            this.rdoChristian = new System.Windows.Forms.RadioButton();
             this.tboOther = new System.Windows.Forms.TextBox();
-            this.chkOther = new System.Windows.Forms.CheckBox();
-            this.chkUndecided = new System.Windows.Forms.CheckBox();
-            this.chkAgnostic = new System.Windows.Forms.CheckBox();
-            this.chkAtheist = new System.Windows.Forms.CheckBox();
-            this.chkTaoist = new System.Windows.Forms.CheckBox();
-            this.chkHindu = new System.Windows.Forms.CheckBox();
-            this.chkBuddhist = new System.Windows.Forms.CheckBox();
-            this.chkJewish = new System.Windows.Forms.CheckBox();
-            this.chkMuslim = new System.Windows.Forms.CheckBox();
-            this.chkChristian = new System.Windows.Forms.CheckBox();
             this.grpRelationship = new System.Windows.Forms.GroupBox();
             this.lbl10 = new System.Windows.Forms.Label();
             this.lbl0 = new System.Windows.Forms.Label();
@@ -63,13 +63,13 @@
             this.cboGrade = new System.Windows.Forms.ComboBox();
             this.tboRoom = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdoRaceOther = new System.Windows.Forms.RadioButton();
+            this.rdoAsian = new System.Windows.Forms.RadioButton();
+            this.rdoNative = new System.Windows.Forms.RadioButton();
+            this.rdoHispanic = new System.Windows.Forms.RadioButton();
+            this.rdoBlack = new System.Windows.Forms.RadioButton();
+            this.rdoWhite = new System.Windows.Forms.RadioButton();
             this.tboRaceOther = new System.Windows.Forms.TextBox();
-            this.chkRaceOther = new System.Windows.Forms.CheckBox();
-            this.chkAsian = new System.Windows.Forms.CheckBox();
-            this.chkNative = new System.Windows.Forms.CheckBox();
-            this.chkHispanic = new System.Windows.Forms.CheckBox();
-            this.chkBlack = new System.Windows.Forms.CheckBox();
-            this.chkWhite = new System.Windows.Forms.CheckBox();
             this.lblGender = new System.Windows.Forms.Label();
             this.cboGender = new System.Windows.Forms.ComboBox();
             this.grpAffiliation.SuspendLayout();
@@ -138,23 +138,143 @@
             // 
             // grpAffiliation
             // 
+            this.grpAffiliation.Controls.Add(this.rdoOther);
+            this.grpAffiliation.Controls.Add(this.rdoUndecided);
+            this.grpAffiliation.Controls.Add(this.rdoAgnostic);
+            this.grpAffiliation.Controls.Add(this.rdoAtheist);
+            this.grpAffiliation.Controls.Add(this.rdoTaoist);
+            this.grpAffiliation.Controls.Add(this.rdoHindu);
+            this.grpAffiliation.Controls.Add(this.rdoBuddhist);
+            this.grpAffiliation.Controls.Add(this.rdoJewish);
+            this.grpAffiliation.Controls.Add(this.rdoMuslim);
+            this.grpAffiliation.Controls.Add(this.rdoChristian);
             this.grpAffiliation.Controls.Add(this.tboOther);
-            this.grpAffiliation.Controls.Add(this.chkOther);
-            this.grpAffiliation.Controls.Add(this.chkUndecided);
-            this.grpAffiliation.Controls.Add(this.chkAgnostic);
-            this.grpAffiliation.Controls.Add(this.chkAtheist);
-            this.grpAffiliation.Controls.Add(this.chkTaoist);
-            this.grpAffiliation.Controls.Add(this.chkHindu);
-            this.grpAffiliation.Controls.Add(this.chkBuddhist);
-            this.grpAffiliation.Controls.Add(this.chkJewish);
-            this.grpAffiliation.Controls.Add(this.chkMuslim);
-            this.grpAffiliation.Controls.Add(this.chkChristian);
             this.grpAffiliation.Location = new System.Drawing.Point(15, 111);
             this.grpAffiliation.Name = "grpAffiliation";
             this.grpAffiliation.Size = new System.Drawing.Size(313, 156);
             this.grpAffiliation.TabIndex = 6;
             this.grpAffiliation.TabStop = false;
             this.grpAffiliation.Text = "Would you consider yourself...";
+            // 
+            // rdoOther
+            // 
+            this.rdoOther.AutoSize = true;
+            this.rdoOther.Location = new System.Drawing.Point(138, 41);
+            this.rdoOther.Name = "rdoOther";
+            this.rdoOther.Size = new System.Drawing.Size(54, 17);
+            this.rdoOther.TabIndex = 25;
+            this.rdoOther.TabStop = true;
+            this.rdoOther.Text = "Other:";
+            this.rdoOther.UseVisualStyleBackColor = true;
+            this.rdoOther.CheckedChanged += new System.EventHandler(this.rdoOther_CheckedChanged);
+            // 
+            // rdoUndecided
+            // 
+            this.rdoUndecided.AutoSize = true;
+            this.rdoUndecided.Location = new System.Drawing.Point(138, 18);
+            this.rdoUndecided.Name = "rdoUndecided";
+            this.rdoUndecided.Size = new System.Drawing.Size(130, 17);
+            this.rdoUndecided.TabIndex = 24;
+            this.rdoUndecided.TabStop = true;
+            this.rdoUndecided.Text = "Undecided/Searching";
+            this.rdoUndecided.UseVisualStyleBackColor = true;
+            this.rdoUndecided.CheckedChanged += new System.EventHandler(this.rdoUndecided_CheckedChanged);
+            // 
+            // rdoAgnostic
+            // 
+            this.rdoAgnostic.AutoSize = true;
+            this.rdoAgnostic.Location = new System.Drawing.Point(77, 87);
+            this.rdoAgnostic.Name = "rdoAgnostic";
+            this.rdoAgnostic.Size = new System.Drawing.Size(66, 17);
+            this.rdoAgnostic.TabIndex = 23;
+            this.rdoAgnostic.TabStop = true;
+            this.rdoAgnostic.Text = "Agnostic";
+            this.rdoAgnostic.UseVisualStyleBackColor = true;
+            this.rdoAgnostic.CheckedChanged += new System.EventHandler(this.rdoAgnostic_CheckedChanged);
+            // 
+            // rdoAtheist
+            // 
+            this.rdoAtheist.AutoSize = true;
+            this.rdoAtheist.Location = new System.Drawing.Point(77, 64);
+            this.rdoAtheist.Name = "rdoAtheist";
+            this.rdoAtheist.Size = new System.Drawing.Size(57, 17);
+            this.rdoAtheist.TabIndex = 22;
+            this.rdoAtheist.TabStop = true;
+            this.rdoAtheist.Text = "Atheist";
+            this.rdoAtheist.UseVisualStyleBackColor = true;
+            this.rdoAtheist.CheckedChanged += new System.EventHandler(this.rdoAtheist_CheckedChanged);
+            // 
+            // rdoTaoist
+            // 
+            this.rdoTaoist.AutoSize = true;
+            this.rdoTaoist.Location = new System.Drawing.Point(77, 41);
+            this.rdoTaoist.Name = "rdoTaoist";
+            this.rdoTaoist.Size = new System.Drawing.Size(54, 17);
+            this.rdoTaoist.TabIndex = 21;
+            this.rdoTaoist.TabStop = true;
+            this.rdoTaoist.Text = "Taoist";
+            this.rdoTaoist.UseVisualStyleBackColor = true;
+            this.rdoTaoist.CheckedChanged += new System.EventHandler(this.rdoTaoist_CheckedChanged);
+            // 
+            // rdoHindu
+            // 
+            this.rdoHindu.AutoSize = true;
+            this.rdoHindu.Location = new System.Drawing.Point(77, 18);
+            this.rdoHindu.Name = "rdoHindu";
+            this.rdoHindu.Size = new System.Drawing.Size(53, 17);
+            this.rdoHindu.TabIndex = 20;
+            this.rdoHindu.TabStop = true;
+            this.rdoHindu.Text = "Hindu";
+            this.rdoHindu.UseVisualStyleBackColor = true;
+            this.rdoHindu.CheckedChanged += new System.EventHandler(this.rdoHindu_CheckedChanged);
+            // 
+            // rdoBuddhist
+            // 
+            this.rdoBuddhist.AutoSize = true;
+            this.rdoBuddhist.Location = new System.Drawing.Point(6, 87);
+            this.rdoBuddhist.Name = "rdoBuddhist";
+            this.rdoBuddhist.Size = new System.Drawing.Size(66, 17);
+            this.rdoBuddhist.TabIndex = 19;
+            this.rdoBuddhist.TabStop = true;
+            this.rdoBuddhist.Text = "Buddhist";
+            this.rdoBuddhist.UseVisualStyleBackColor = true;
+            this.rdoBuddhist.CheckedChanged += new System.EventHandler(this.rdoBuddhist_CheckedChanged);
+            // 
+            // rdoJewish
+            // 
+            this.rdoJewish.AutoSize = true;
+            this.rdoJewish.Location = new System.Drawing.Point(6, 64);
+            this.rdoJewish.Name = "rdoJewish";
+            this.rdoJewish.Size = new System.Drawing.Size(57, 17);
+            this.rdoJewish.TabIndex = 18;
+            this.rdoJewish.TabStop = true;
+            this.rdoJewish.Text = "Jewish";
+            this.rdoJewish.UseVisualStyleBackColor = true;
+            this.rdoJewish.CheckedChanged += new System.EventHandler(this.rdoJewish_CheckedChanged);
+            // 
+            // rdoMuslim
+            // 
+            this.rdoMuslim.AutoSize = true;
+            this.rdoMuslim.Location = new System.Drawing.Point(6, 41);
+            this.rdoMuslim.Name = "rdoMuslim";
+            this.rdoMuslim.Size = new System.Drawing.Size(57, 17);
+            this.rdoMuslim.TabIndex = 17;
+            this.rdoMuslim.TabStop = true;
+            this.rdoMuslim.Text = "Muslim";
+            this.rdoMuslim.UseVisualStyleBackColor = true;
+            this.rdoMuslim.CheckedChanged += new System.EventHandler(this.rdoMuslim_CheckedChanged);
+            // 
+            // rdoChristian
+            // 
+            this.rdoChristian.AutoSize = true;
+            this.rdoChristian.Location = new System.Drawing.Point(6, 18);
+            this.rdoChristian.Name = "rdoChristian";
+            this.rdoChristian.Size = new System.Drawing.Size(65, 17);
+            this.rdoChristian.TabIndex = 16;
+            this.rdoChristian.TabStop = true;
+            this.rdoChristian.Text = "Christian";
+            this.rdoChristian.UseVisualStyleBackColor = true;
+            this.rdoChristian.CheckedChanged += new System.EventHandler(this.rdoChristian_CheckedChanged);
             // 
             // tboOther
             // 
@@ -164,116 +284,6 @@
             this.tboOther.Size = new System.Drawing.Size(100, 20);
             this.tboOther.TabIndex = 15;
             this.tboOther.TextChanged += new System.EventHandler(this.tboOther_TextChanged);
-            // 
-            // chkOther
-            // 
-            this.chkOther.AutoSize = true;
-            this.chkOther.Location = new System.Drawing.Point(138, 42);
-            this.chkOther.Name = "chkOther";
-            this.chkOther.Size = new System.Drawing.Size(55, 17);
-            this.chkOther.TabIndex = 14;
-            this.chkOther.Text = "Other:";
-            this.chkOther.UseVisualStyleBackColor = true;
-            this.chkOther.CheckedChanged += new System.EventHandler(this.chkOther_CheckedChanged);
-            // 
-            // chkUndecided
-            // 
-            this.chkUndecided.AutoSize = true;
-            this.chkUndecided.Location = new System.Drawing.Point(138, 19);
-            this.chkUndecided.Name = "chkUndecided";
-            this.chkUndecided.Size = new System.Drawing.Size(78, 17);
-            this.chkUndecided.TabIndex = 14;
-            this.chkUndecided.Text = "Undecided";
-            this.chkUndecided.UseVisualStyleBackColor = true;
-            this.chkUndecided.CheckedChanged += new System.EventHandler(this.chkUndecided_CheckedChanged);
-            // 
-            // chkAgnostic
-            // 
-            this.chkAgnostic.AutoSize = true;
-            this.chkAgnostic.Location = new System.Drawing.Point(78, 88);
-            this.chkAgnostic.Name = "chkAgnostic";
-            this.chkAgnostic.Size = new System.Drawing.Size(67, 17);
-            this.chkAgnostic.TabIndex = 14;
-            this.chkAgnostic.Text = "Agnostic";
-            this.chkAgnostic.UseVisualStyleBackColor = true;
-            this.chkAgnostic.CheckedChanged += new System.EventHandler(this.chkAgnostic_CheckedChanged);
-            // 
-            // chkAtheist
-            // 
-            this.chkAtheist.AutoSize = true;
-            this.chkAtheist.Location = new System.Drawing.Point(78, 65);
-            this.chkAtheist.Name = "chkAtheist";
-            this.chkAtheist.Size = new System.Drawing.Size(58, 17);
-            this.chkAtheist.TabIndex = 14;
-            this.chkAtheist.Text = "Atheist";
-            this.chkAtheist.UseVisualStyleBackColor = true;
-            this.chkAtheist.CheckedChanged += new System.EventHandler(this.chkAtheist_CheckedChanged);
-            // 
-            // chkTaoist
-            // 
-            this.chkTaoist.AutoSize = true;
-            this.chkTaoist.Location = new System.Drawing.Point(78, 42);
-            this.chkTaoist.Name = "chkTaoist";
-            this.chkTaoist.Size = new System.Drawing.Size(55, 17);
-            this.chkTaoist.TabIndex = 5;
-            this.chkTaoist.Text = "Taoist";
-            this.chkTaoist.UseVisualStyleBackColor = true;
-            this.chkTaoist.CheckedChanged += new System.EventHandler(this.chkTaoist_CheckedChanged);
-            // 
-            // chkHindu
-            // 
-            this.chkHindu.AutoSize = true;
-            this.chkHindu.Location = new System.Drawing.Point(78, 19);
-            this.chkHindu.Name = "chkHindu";
-            this.chkHindu.Size = new System.Drawing.Size(54, 17);
-            this.chkHindu.TabIndex = 4;
-            this.chkHindu.Text = "Hindu";
-            this.chkHindu.UseVisualStyleBackColor = true;
-            this.chkHindu.CheckedChanged += new System.EventHandler(this.chkHindu_CheckedChanged);
-            // 
-            // chkBuddhist
-            // 
-            this.chkBuddhist.AutoSize = true;
-            this.chkBuddhist.Location = new System.Drawing.Point(6, 88);
-            this.chkBuddhist.Name = "chkBuddhist";
-            this.chkBuddhist.Size = new System.Drawing.Size(67, 17);
-            this.chkBuddhist.TabIndex = 3;
-            this.chkBuddhist.Text = "Buddhist";
-            this.chkBuddhist.UseVisualStyleBackColor = true;
-            this.chkBuddhist.CheckedChanged += new System.EventHandler(this.chkBuddhist_CheckedChanged);
-            // 
-            // chkJewish
-            // 
-            this.chkJewish.AutoSize = true;
-            this.chkJewish.Location = new System.Drawing.Point(6, 65);
-            this.chkJewish.Name = "chkJewish";
-            this.chkJewish.Size = new System.Drawing.Size(58, 17);
-            this.chkJewish.TabIndex = 2;
-            this.chkJewish.Text = "Jewish";
-            this.chkJewish.UseVisualStyleBackColor = true;
-            this.chkJewish.CheckedChanged += new System.EventHandler(this.chkJewish_CheckedChanged);
-            // 
-            // chkMuslim
-            // 
-            this.chkMuslim.AutoSize = true;
-            this.chkMuslim.Location = new System.Drawing.Point(6, 42);
-            this.chkMuslim.Name = "chkMuslim";
-            this.chkMuslim.Size = new System.Drawing.Size(58, 17);
-            this.chkMuslim.TabIndex = 1;
-            this.chkMuslim.Text = "Muslim";
-            this.chkMuslim.UseVisualStyleBackColor = true;
-            this.chkMuslim.CheckedChanged += new System.EventHandler(this.chkMuslim_CheckedChanged);
-            // 
-            // chkChristian
-            // 
-            this.chkChristian.AutoSize = true;
-            this.chkChristian.Location = new System.Drawing.Point(6, 19);
-            this.chkChristian.Name = "chkChristian";
-            this.chkChristian.Size = new System.Drawing.Size(66, 17);
-            this.chkChristian.TabIndex = 0;
-            this.chkChristian.Text = "Christian";
-            this.chkChristian.UseVisualStyleBackColor = true;
-            this.chkChristian.CheckedChanged += new System.EventHandler(this.chkChristian_CheckedChanged);
             // 
             // grpRelationship
             // 
@@ -327,7 +337,7 @@
             // rdoNo
             // 
             this.rdoNo.AutoSize = true;
-            this.rdoNo.Location = new System.Drawing.Point(101, 65);
+            this.rdoNo.Location = new System.Drawing.Point(101, 62);
             this.rdoNo.Name = "rdoNo";
             this.rdoNo.Size = new System.Drawing.Size(39, 17);
             this.rdoNo.TabIndex = 2;
@@ -478,13 +488,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rdoRaceOther);
+            this.groupBox1.Controls.Add(this.rdoAsian);
+            this.groupBox1.Controls.Add(this.rdoNative);
+            this.groupBox1.Controls.Add(this.rdoHispanic);
+            this.groupBox1.Controls.Add(this.rdoBlack);
+            this.groupBox1.Controls.Add(this.rdoWhite);
             this.groupBox1.Controls.Add(this.tboRaceOther);
-            this.groupBox1.Controls.Add(this.chkRaceOther);
-            this.groupBox1.Controls.Add(this.chkAsian);
-            this.groupBox1.Controls.Add(this.chkNative);
-            this.groupBox1.Controls.Add(this.chkHispanic);
-            this.groupBox1.Controls.Add(this.chkBlack);
-            this.groupBox1.Controls.Add(this.chkWhite);
             this.groupBox1.Location = new System.Drawing.Point(334, 111);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(271, 156);
@@ -492,80 +502,86 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Are you...";
             // 
+            // rdoRaceOther
+            // 
+            this.rdoRaceOther.AutoSize = true;
+            this.rdoRaceOther.Location = new System.Drawing.Point(6, 133);
+            this.rdoRaceOther.Name = "rdoRaceOther";
+            this.rdoRaceOther.Size = new System.Drawing.Size(54, 17);
+            this.rdoRaceOther.TabIndex = 12;
+            this.rdoRaceOther.TabStop = true;
+            this.rdoRaceOther.Text = "Other:";
+            this.rdoRaceOther.UseVisualStyleBackColor = true;
+            this.rdoRaceOther.CheckedChanged += new System.EventHandler(this.rdoRaceOther_CheckedChanged);
+            // 
+            // rdoAsian
+            // 
+            this.rdoAsian.AutoSize = true;
+            this.rdoAsian.Location = new System.Drawing.Point(6, 110);
+            this.rdoAsian.Name = "rdoAsian";
+            this.rdoAsian.Size = new System.Drawing.Size(134, 17);
+            this.rdoAsian.TabIndex = 11;
+            this.rdoAsian.TabStop = true;
+            this.rdoAsian.Text = "Asian / Pacific Islander";
+            this.rdoAsian.UseVisualStyleBackColor = true;
+            this.rdoAsian.CheckedChanged += new System.EventHandler(this.rdoAsian_CheckedChanged);
+            // 
+            // rdoNative
+            // 
+            this.rdoNative.AutoSize = true;
+            this.rdoNative.Location = new System.Drawing.Point(6, 87);
+            this.rdoNative.Name = "rdoNative";
+            this.rdoNative.Size = new System.Drawing.Size(190, 17);
+            this.rdoNative.TabIndex = 10;
+            this.rdoNative.TabStop = true;
+            this.rdoNative.Text = "Native American / American Indian";
+            this.rdoNative.UseVisualStyleBackColor = true;
+            this.rdoNative.CheckedChanged += new System.EventHandler(this.rdoNative_CheckedChanged);
+            // 
+            // rdoHispanic
+            // 
+            this.rdoHispanic.AutoSize = true;
+            this.rdoHispanic.Location = new System.Drawing.Point(6, 64);
+            this.rdoHispanic.Name = "rdoHispanic";
+            this.rdoHispanic.Size = new System.Drawing.Size(147, 17);
+            this.rdoHispanic.TabIndex = 9;
+            this.rdoHispanic.TabStop = true;
+            this.rdoHispanic.Text = "Hispanic / Latin American";
+            this.rdoHispanic.UseVisualStyleBackColor = true;
+            this.rdoHispanic.CheckedChanged += new System.EventHandler(this.rdoHispanic_CheckedChanged);
+            // 
+            // rdoBlack
+            // 
+            this.rdoBlack.AutoSize = true;
+            this.rdoBlack.Location = new System.Drawing.Point(6, 41);
+            this.rdoBlack.Name = "rdoBlack";
+            this.rdoBlack.Size = new System.Drawing.Size(143, 17);
+            this.rdoBlack.TabIndex = 8;
+            this.rdoBlack.TabStop = true;
+            this.rdoBlack.Text = "Black / African American";
+            this.rdoBlack.UseVisualStyleBackColor = true;
+            this.rdoBlack.CheckedChanged += new System.EventHandler(this.rdoBlack_CheckedChanged);
+            // 
+            // rdoWhite
+            // 
+            this.rdoWhite.AutoSize = true;
+            this.rdoWhite.Location = new System.Drawing.Point(6, 18);
+            this.rdoWhite.Name = "rdoWhite";
+            this.rdoWhite.Size = new System.Drawing.Size(114, 17);
+            this.rdoWhite.TabIndex = 7;
+            this.rdoWhite.TabStop = true;
+            this.rdoWhite.Text = "White / Caucasian";
+            this.rdoWhite.UseVisualStyleBackColor = true;
+            this.rdoWhite.CheckedChanged += new System.EventHandler(this.rdoWhite_CheckedChanged);
+            // 
             // tboRaceOther
             // 
             this.tboRaceOther.Enabled = false;
-            this.tboRaceOther.Location = new System.Drawing.Point(67, 130);
+            this.tboRaceOther.Location = new System.Drawing.Point(67, 132);
             this.tboRaceOther.Name = "tboRaceOther";
             this.tboRaceOther.Size = new System.Drawing.Size(100, 20);
             this.tboRaceOther.TabIndex = 6;
             this.tboRaceOther.TextChanged += new System.EventHandler(this.tboRaceOther_TextChanged);
-            // 
-            // chkRaceOther
-            // 
-            this.chkRaceOther.AutoSize = true;
-            this.chkRaceOther.Location = new System.Drawing.Point(6, 132);
-            this.chkRaceOther.Name = "chkRaceOther";
-            this.chkRaceOther.Size = new System.Drawing.Size(55, 17);
-            this.chkRaceOther.TabIndex = 5;
-            this.chkRaceOther.Text = "Other:";
-            this.chkRaceOther.UseVisualStyleBackColor = true;
-            this.chkRaceOther.CheckedChanged += new System.EventHandler(this.chkRaceOther_CheckedChanged);
-            // 
-            // chkAsian
-            // 
-            this.chkAsian.AutoSize = true;
-            this.chkAsian.Location = new System.Drawing.Point(6, 109);
-            this.chkAsian.Name = "chkAsian";
-            this.chkAsian.Size = new System.Drawing.Size(135, 17);
-            this.chkAsian.TabIndex = 4;
-            this.chkAsian.Text = "Asian / Pacific Islander";
-            this.chkAsian.UseVisualStyleBackColor = true;
-            this.chkAsian.CheckedChanged += new System.EventHandler(this.chkAsian_CheckedChanged);
-            // 
-            // chkNative
-            // 
-            this.chkNative.AutoSize = true;
-            this.chkNative.Location = new System.Drawing.Point(6, 86);
-            this.chkNative.Name = "chkNative";
-            this.chkNative.Size = new System.Drawing.Size(195, 17);
-            this.chkNative.TabIndex = 3;
-            this.chkNative.Text = "Native American or American Indian";
-            this.chkNative.UseVisualStyleBackColor = true;
-            this.chkNative.CheckedChanged += new System.EventHandler(this.chkNative_CheckedChanged);
-            // 
-            // chkHispanic
-            // 
-            this.chkHispanic.AutoSize = true;
-            this.chkHispanic.Location = new System.Drawing.Point(6, 63);
-            this.chkHispanic.Name = "chkHispanic";
-            this.chkHispanic.Size = new System.Drawing.Size(111, 17);
-            this.chkHispanic.TabIndex = 2;
-            this.chkHispanic.Text = "Hispanic or Latino";
-            this.chkHispanic.UseVisualStyleBackColor = true;
-            this.chkHispanic.CheckedChanged += new System.EventHandler(this.chkHispanic_CheckedChanged);
-            // 
-            // chkBlack
-            // 
-            this.chkBlack.AutoSize = true;
-            this.chkBlack.Location = new System.Drawing.Point(6, 40);
-            this.chkBlack.Name = "chkBlack";
-            this.chkBlack.Size = new System.Drawing.Size(148, 17);
-            this.chkBlack.TabIndex = 1;
-            this.chkBlack.Text = "Black or African American";
-            this.chkBlack.UseVisualStyleBackColor = true;
-            this.chkBlack.CheckedChanged += new System.EventHandler(this.chkBlack_CheckedChanged);
-            // 
-            // chkWhite
-            // 
-            this.chkWhite.AutoSize = true;
-            this.chkWhite.Location = new System.Drawing.Point(6, 19);
-            this.chkWhite.Name = "chkWhite";
-            this.chkWhite.Size = new System.Drawing.Size(54, 17);
-            this.chkWhite.TabIndex = 0;
-            this.chkWhite.Text = "White";
-            this.chkWhite.UseVisualStyleBackColor = true;
-            this.chkWhite.CheckedChanged += new System.EventHandler(this.chkWhite_CheckedChanged);
             // 
             // lblGender
             // 
@@ -644,27 +660,11 @@
         private System.Windows.Forms.ComboBox cboGrade;
         private System.Windows.Forms.TextBox tboRoom;
         private System.Windows.Forms.TextBox tboOther;
-        private System.Windows.Forms.CheckBox chkOther;
-        private System.Windows.Forms.CheckBox chkUndecided;
-        private System.Windows.Forms.CheckBox chkAgnostic;
-        private System.Windows.Forms.CheckBox chkAtheist;
-        private System.Windows.Forms.CheckBox chkTaoist;
-        private System.Windows.Forms.CheckBox chkHindu;
-        private System.Windows.Forms.CheckBox chkBuddhist;
-        private System.Windows.Forms.CheckBox chkJewish;
-        private System.Windows.Forms.CheckBox chkMuslim;
-        private System.Windows.Forms.CheckBox chkChristian;
         private System.Windows.Forms.Label lbl10;
         private System.Windows.Forms.Label lbl0;
         private System.Windows.Forms.TrackBar trkRelationship;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox tboRaceOther;
-        private System.Windows.Forms.CheckBox chkRaceOther;
-        private System.Windows.Forms.CheckBox chkAsian;
-        private System.Windows.Forms.CheckBox chkNative;
-        private System.Windows.Forms.CheckBox chkHispanic;
-        private System.Windows.Forms.CheckBox chkBlack;
-        private System.Windows.Forms.CheckBox chkWhite;
         private System.Windows.Forms.RadioButton rdoNo;
         private System.Windows.Forms.RadioButton rdoMaybe;
         private System.Windows.Forms.RadioButton rdoYes;
@@ -673,6 +673,22 @@
         private System.Windows.Forms.RadioButton rdoCruYes;
         private System.Windows.Forms.Label lblGender;
         private System.Windows.Forms.ComboBox cboGender;
+        private System.Windows.Forms.RadioButton rdoOther;
+        private System.Windows.Forms.RadioButton rdoUndecided;
+        private System.Windows.Forms.RadioButton rdoAgnostic;
+        private System.Windows.Forms.RadioButton rdoAtheist;
+        private System.Windows.Forms.RadioButton rdoTaoist;
+        private System.Windows.Forms.RadioButton rdoHindu;
+        private System.Windows.Forms.RadioButton rdoBuddhist;
+        private System.Windows.Forms.RadioButton rdoJewish;
+        private System.Windows.Forms.RadioButton rdoMuslim;
+        private System.Windows.Forms.RadioButton rdoChristian;
+        private System.Windows.Forms.RadioButton rdoRaceOther;
+        private System.Windows.Forms.RadioButton rdoAsian;
+        private System.Windows.Forms.RadioButton rdoNative;
+        private System.Windows.Forms.RadioButton rdoHispanic;
+        private System.Windows.Forms.RadioButton rdoBlack;
+        private System.Windows.Forms.RadioButton rdoWhite;
     }
 }
 
