@@ -72,12 +72,17 @@
             this.tboRaceOther = new System.Windows.Forms.TextBox();
             this.lblGender = new System.Windows.Forms.Label();
             this.cboGender = new System.Windows.Forms.ComboBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuProcess = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.grpAffiliation.SuspendLayout();
             this.grpRelationship.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkRelationship)).BeginInit();
             this.grpConvo.SuspendLayout();
             this.grpCruInfo.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnDone
@@ -603,6 +608,38 @@
             this.cboGender.Size = new System.Drawing.Size(84, 21);
             this.cboGender.TabIndex = 16;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuFile});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(617, 24);
+            this.menuStrip1.TabIndex = 17;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuFile
+            // 
+            this.menuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuProcess,
+            this.menuExit});
+            this.menuFile.Name = "menuFile";
+            this.menuFile.Size = new System.Drawing.Size(37, 20);
+            this.menuFile.Text = "File";
+            // 
+            // menuProcess
+            // 
+            this.menuProcess.Name = "menuProcess";
+            this.menuProcess.Size = new System.Drawing.Size(152, 22);
+            this.menuProcess.Text = "Process";
+            // 
+            // menuExit
+            // 
+            this.menuExit.Name = "menuExit";
+            this.menuExit.Size = new System.Drawing.Size(152, 22);
+            this.menuExit.Text = "Exit";
+            this.menuExit.Click += new System.EventHandler(this.menuExit_Click);
+            // 
             // CruContactCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -625,6 +662,8 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnDone);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "CruContactCard";
             this.Text = "Contact Card";
             this.grpAffiliation.ResumeLayout(false);
@@ -638,6 +677,8 @@
             this.grpCruInfo.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -689,6 +730,10 @@
         private System.Windows.Forms.RadioButton rdoHispanic;
         private System.Windows.Forms.RadioButton rdoBlack;
         private System.Windows.Forms.RadioButton rdoWhite;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuFile;
+        private System.Windows.Forms.ToolStripMenuItem menuProcess;
+        private System.Windows.Forms.ToolStripMenuItem menuExit;
     }
 }
 

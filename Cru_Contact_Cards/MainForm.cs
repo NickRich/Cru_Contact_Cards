@@ -21,6 +21,7 @@ namespace Cru_Contact_Cards
         private string race;
         private string cruInfo;
         private string convo;
+        bool needToProcess;
 
         public CruContactCard()
         {
@@ -43,6 +44,8 @@ namespace Cru_Contact_Cards
             currentRace.Checked = false;
             currentCru.Checked = false;
             currentConvo.Checked = false;
+            needToProcess = true;
+            menuExit.Enabled = false;
         }
 
         #region ---Religion Interactables---
@@ -203,5 +206,10 @@ namespace Cru_Contact_Cards
         }
 
         #endregion
+
+        private void menuExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
