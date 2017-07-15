@@ -22,6 +22,23 @@ namespace Cru_Contact_Cards
         private string cruInfo;
         private string convo;
         bool needToProcess;
+        private List<Contact> Cary;
+        private List<Contact> Earhart;
+        private List<Contact> FirstStreet;
+        private List<Contact> Harrison;
+        private List<Contact> Hawkins;
+        private List<Contact> Hillenbrand;
+        private List<Contact> Hilltop;
+        private List<Contact> Honors;
+        private List<Contact> McCutcheon;
+        private List<Contact> Meredith;
+        private List<Contact> Owen;
+        private List<Contact> Pville;
+        private List<Contact> Shreve;
+        private List<Contact> Tarkington;
+        private List<Contact> ThirdStreet;
+        private List<Contact> Wiley;
+        private List<Contact> Windsor;
 
         public CruContactCard()
         {
@@ -32,6 +49,80 @@ namespace Cru_Contact_Cards
         {
             Contact newContact = new Contact(tboName.Text, cboGrade.SelectedItem.ToString(), cboGender.SelectedItem.ToString(),
                 cboResidence.SelectedItem.ToString(), tboRoom.ToString(), religion, race, trkRelationship.Value, cruInfo, convo);
+
+            #region ---Add to Lists---
+            string hall = newContact.getHall();
+            if (hall.Contains("Cary"))
+            {
+                Cary.Add(newContact);
+            }
+            else if (hall.Contains("Earhart"))
+            {
+                Earhart.Add(newContact);
+            }
+            else if (hall.Contains("First Street"))
+            {
+                FirstStreet.Add(newContact);
+            }
+            else if (hall.Contains("Harrison"))
+            {
+                Harrison.Add(newContact);
+            }
+            else if (hall.Contains("Hawkins"))
+            {
+                Hawkins.Add(newContact);
+            }
+            else if (hall.Contains("Hillenbrand"))
+            {
+                Hillenbrand.Add(newContact);
+            }
+            else if (hall.Contains("Hilltop"))
+            {
+                Hilltop.Add(newContact);
+            }
+            else if (hall.Contains("Honors"))
+            {
+                Honors.Add(newContact);
+            }
+            else if (hall.Contains("McCutcheon"))
+            {
+                McCutcheon.Add(newContact);
+            }
+            else if (hall.Contains("Meredith"))
+            {
+                Meredith.Add(newContact);
+            }
+            else if (hall.Contains("Owen"))
+            {
+                Owen.Add(newContact);
+            }
+            else if (hall.Contains("Village"))
+            {
+                Pville.Add(newContact);
+            }
+            else if (hall.Contains("Shreve"))
+            {
+                Shreve.Add(newContact);
+            }
+            else if (hall.Contains("Tarkington"))
+            {
+                Tarkington.Add(newContact);
+            }
+            else if (hall.Contains("Third Street"))
+            {
+                ThirdStreet.Add(newContact);
+            }
+            else if (hall.Contains("Wiley"))
+            {
+                Wiley.Add(newContact);
+            }
+            else if (hall.Contains("Windsor"))
+            {
+                Windsor.Add(newContact);
+            }
+            #endregion
+            
+            //Reset Card
             tboName.Text = "";
             cboGender.Text = "";
             cboGrade.Text = "";
@@ -46,6 +137,10 @@ namespace Cru_Contact_Cards
             currentConvo.Checked = false;
             needToProcess = true;
             menuExit.Enabled = false;
+            currentConvo = null;
+            currentCru = null;
+            currentRace = null;
+            currentReligion = null;
         }
 
         #region ---Religion Interactables---

@@ -32,5 +32,10 @@ namespace Cru_Contact_Cards
             this.cruInfo = cruInfo;
             this.convo = convo;
         }
+
+        public string getHall()
+        {
+            return hall;
+        }
     }
 }
