@@ -87,6 +87,7 @@
             // 
             // btnDone
             // 
+            this.btnDone.Enabled = false;
             this.btnDone.Location = new System.Drawing.Point(530, 464);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(75, 23);
@@ -429,6 +430,7 @@
             this.tboName.Name = "tboName";
             this.tboName.Size = new System.Drawing.Size(176, 20);
             this.tboName.TabIndex = 10;
+            this.tboName.TextChanged += new System.EventHandler(this.tboName_TextChanged);
             // 
             // cboResidence
             // 
@@ -469,6 +471,7 @@
             this.cboResidence.Name = "cboResidence";
             this.cboResidence.Size = new System.Drawing.Size(159, 21);
             this.cboResidence.TabIndex = 11;
+            this.cboResidence.SelectedIndexChanged += new System.EventHandler(this.cboResidence_SelectedIndexChanged);
             // 
             // cboGrade
             // 
@@ -483,6 +486,7 @@
             this.cboGrade.Name = "cboGrade";
             this.cboGrade.Size = new System.Drawing.Size(176, 21);
             this.cboGrade.TabIndex = 12;
+            this.cboGrade.SelectedIndexChanged += new System.EventHandler(this.cboGrade_SelectedIndexChanged);
             // 
             // tboRoom
             // 
@@ -490,6 +494,7 @@
             this.tboRoom.Name = "tboRoom";
             this.tboRoom.Size = new System.Drawing.Size(159, 20);
             this.tboRoom.TabIndex = 13;
+            this.tboRoom.TextChanged += new System.EventHandler(this.tboRoom_TextChanged);
             // 
             // groupBox1
             // 
@@ -607,6 +612,7 @@
             this.cboGender.Name = "cboGender";
             this.cboGender.Size = new System.Drawing.Size(84, 21);
             this.cboGender.TabIndex = 16;
+            this.cboGender.SelectedIndexChanged += new System.EventHandler(this.cboGender_SelectedIndexChanged);
             // 
             // menuStrip1
             // 
@@ -630,13 +636,13 @@
             // menuProcess
             // 
             this.menuProcess.Name = "menuProcess";
-            this.menuProcess.Size = new System.Drawing.Size(152, 22);
+            this.menuProcess.Size = new System.Drawing.Size(114, 22);
             this.menuProcess.Text = "Process";
             // 
             // menuExit
             // 
             this.menuExit.Name = "menuExit";
-            this.menuExit.Size = new System.Drawing.Size(152, 22);
+            this.menuExit.Size = new System.Drawing.Size(114, 22);
             this.menuExit.Text = "Exit";
             this.menuExit.Click += new System.EventHandler(this.menuExit_Click);
             // 
