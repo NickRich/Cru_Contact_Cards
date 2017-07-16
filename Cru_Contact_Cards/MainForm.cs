@@ -20,6 +20,7 @@ namespace Cru_Contact_Cards
         RadioButton currentRace = null;
         RadioButton currentCru = null;
         RadioButton currentConvo = null;
+        private bool firstTime = true;
         private string religion = "";
         private string race = "";
         private string cruInfo = "";
@@ -200,6 +201,15 @@ namespace Cru_Contact_Cards
         {
             religion = "Christian";
             currentReligion = rdoChristian;
+            //Visual Studio Automatically checked this upon startup, removes said problem until more elegant solution found
+            if (firstTime)
+            {
+                rdoChristian.Checked = false;
+                religion = "";
+                currentReligion = null;
+                firstTime = false;
+                return;
+            }
             btnDone.Enabled = checkIfComplete();
 
         }
