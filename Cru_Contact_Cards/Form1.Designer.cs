@@ -636,13 +636,14 @@
             // menuProcess
             // 
             this.menuProcess.Name = "menuProcess";
-            this.menuProcess.Size = new System.Drawing.Size(114, 22);
+            this.menuProcess.Size = new System.Drawing.Size(152, 22);
             this.menuProcess.Text = "Process";
+            this.menuProcess.Click += new System.EventHandler(this.menuProcess_Click);
             // 
             // menuExit
             // 
             this.menuExit.Name = "menuExit";
-            this.menuExit.Size = new System.Drawing.Size(114, 22);
+            this.menuExit.Size = new System.Drawing.Size(152, 22);
             this.menuExit.Text = "Exit";
             this.menuExit.Click += new System.EventHandler(this.menuExit_Click);
             // 

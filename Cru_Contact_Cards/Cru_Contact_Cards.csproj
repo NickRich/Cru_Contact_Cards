@@ -79,5 +79,24 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="ContactLists\Cary.txt" />
+    <Content Include="ContactLists\Earhart.txt" />
+    <Content Include="ContactLists\FirstStreet.txt" />
+    <Content Include="ContactLists\Harrison.txt" />
+    <Content Include="ContactLists\Hawkins.txt" />
+    <Content Include="ContactLists\Hillenbrand.txt" />
+    <Content Include="ContactLists\Hilltop.txt" />
+    <Content Include="ContactLists\Honors.txt" />
+    <Content Include="ContactLists\McCutcheon.txt" />
+    <Content Include="ContactLists\Meredith.txt" />
+    <Content Include="ContactLists\Owen.txt" />
+    <Content Include="ContactLists\Pville.txt" />
+    <Content Include="ContactLists\Shreve.txt" />
+    <Content Include="ContactLists\Tarkington.txt" />
+    <Content Include="ContactLists\ThirdStreet.txt" />
+    <Content Include="ContactLists\Wiley.txt" />
+    <Content Include="ContactLists\Windsor.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

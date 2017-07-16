@@ -1,0 +1,1 @@
+﻿Name, Gender, Grade, Hall, Room, Religion, Race, Relationship, CruInfo, Convo

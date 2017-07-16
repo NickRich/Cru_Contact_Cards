@@ -12,8 +12,9 @@ namespace Cru_Contact_Cards
 {
     public partial class CruContactCard : Form
     {
-        //TODO: Figure out how to process lists
-        //TODO: Figure out why it automatically presses rdoChristian
+        //TODO: Fix paths to save in txt files
+        //TODO: Makes paths relative
+        //TODO: Check files to make sure no duplicate contacts
 
         #region ---Global Variables---
         RadioButton currentReligion = null;
@@ -43,8 +44,11 @@ namespace Cru_Contact_Cards
         private List<Contact> ThirdStreet;
         private List<Contact> Wiley;
         private List<Contact> Windsor;
-#endregion
+        List<Contact>[] halls;
+        const int numHalls = 17;
+        #endregion
 
+        #region ---Form Events---
         public CruContactCard()
         {
             InitializeComponent();
@@ -65,7 +69,33 @@ namespace Cru_Contact_Cards
             ThirdStreet = new List<Contact>();
             Wiley = new List<Contact>();
             Windsor = new List<Contact>();
+            halls = new List<Contact>[numHalls]
+            {
+                Cary,
+                Earhart,
+                FirstStreet,
+                Harrison,
+                Hawkins,
+                Hillenbrand,
+                Hilltop,
+                Honors,
+                McCutcheon,
+                Meredith,
+                Owen,
+                Pville,
+                Shreve,
+                Tarkington,
+                ThirdStreet,
+                Wiley,
+                Windsor
+            };
         }
+
+        private void MainForm_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+            menuProcess_Click(null, null);
+        }
+#endregion
 
         private void btnDone_Click(object sender, EventArgs e)
         {
@@ -73,7 +103,7 @@ namespace Cru_Contact_Cards
                 cboResidence.SelectedItem.ToString(), tboRoom.ToString(), religion, race, trkRelationship.Value, cruInfo, convo);
 
             #region ---Add to Lists---
-            string hall = newContact.getHall();
+            string hall = newContact.Hall;
             if (hall.Contains("Cary"))
             {
                 Cary.Add(newContact);
@@ -164,6 +194,8 @@ namespace Cru_Contact_Cards
             currentRace = null;
             currentReligion = null;
             btnDone.Enabled = false;
+            needToProcess = true;
+            menuExit.Enabled = false;
         }
 
         #region ---Personal Info Interactables---
@@ -407,6 +439,264 @@ namespace Cru_Contact_Cards
             Application.Exit();
         }
 
+        private void menuProcess_Click(object sender, EventArgs e)
+        {
+            processCary();
+            processEarhart();
+            processFirstStreet();
+            processHarrison();
+            processHawkins();
+            processHillenbrand();
+            processHilltop();
+            processHonors();
+            processMcCutcheon();
+            processMeredith();
+            processOwen();
+            processPville();
+            processShreve();
+            processTark();
+            processWiley();
+            processWindsor();
+        }
 
+        private void processCary()
+        {
+            foreach (Contact cntct in Cary)
+            {
+                using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(@"C:\Users\nickr\OneDrive\Documents\Visual Studio 2017\
+                                        Projects\Cru_Contact_Cards\Cru_Contact_Cards\ContactLists\Cary.txt", true))
+                {
+                    file.WriteLine(cntct.Name + ", " + cntct.Gender + ", " + cntct.Grade + ", " + cntct.Hall + ", "
+                        + cntct.Room + ", " + cntct.Religion + ", " + cntct.Race + ", " + cntct.Relationship + ", "
+                        + cntct.CruInfo + ", " + cntct.Convo);
+                }
+            }
+        }
+        private void processEarhart()
+        {
+            string path = Application.ExecutablePath;
+            foreach (Contact cntct in Earhart)
+            {
+                using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(@"C:\Users\nickr\OneDrive\Documents\Visual Studio 2017\
+                                        Projects\Cru_Contact_Cards\Cru_Contact_Cards\ContactLists\Earhart.txt", true))
+                {
+                    file.WriteLine(cntct.Name + ", " + cntct.Gender + ", " + cntct.Grade + ", " + cntct.Hall + ", "
+                        + cntct.Room + ", " + cntct.Religion + ", " + cntct.Race + ", " + cntct.Relationship + ", "
+                        + cntct.CruInfo + ", " + cntct.Convo);
+                }
+            }
+        }
+        private void processFirstStreet()
+        {
+            foreach (Contact cntct in FirstStreet)
+            {
+                using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(@"C:\Users\nickr\OneDrive\Documents\Visual Studio 2017\
+                                        Projects\Cru_Contact_Cards\Cru_Contact_Cards\ContactLists\FirstStreet.txt", true))
+                {
+                    file.WriteLine(cntct.Name + ", " + cntct.Gender + ", " + cntct.Grade + ", " + cntct.Hall + ", "
+                        + cntct.Room + ", " + cntct.Religion + ", " + cntct.Race + ", " + cntct.Relationship + ", "
+                        + cntct.CruInfo + ", " + cntct.Convo);
+                }
+            }
+        }
+        private void processHarrison()
+        {
+            foreach (Contact cntct in Harrison)
+            {
+                using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(@"C:\Users\nickr\OneDrive\Documents\Visual Studio 2017\
+                                        Projects\Cru_Contact_Cards\Cru_Contact_Cards\ContactLists\Harrison.txt", true))
+                {
+                    file.WriteLine(cntct.Name + ", " + cntct.Gender + ", " + cntct.Grade + ", " + cntct.Hall + ", "
+                        + cntct.Room + ", " + cntct.Religion + ", " + cntct.Race + ", " + cntct.Relationship + ", "
+                        + cntct.CruInfo + ", " + cntct.Convo);
+                }
+            }
+        }
+        private void processHawkins()
+        {
+            foreach (Contact cntct in Hawkins)
+            {
+                using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(@"C:\Users\nickr\OneDrive\Documents\Visual Studio 2017\
+                                        Projects\Cru_Contact_Cards\Cru_Contact_Cards\ContactLists\Hawkins.txt", true))
+                {
+                    file.WriteLine(cntct.Name + ", " + cntct.Gender + ", " + cntct.Grade + ", " + cntct.Hall + ", "
+                        + cntct.Room + ", " + cntct.Religion + ", " + cntct.Race + ", " + cntct.Relationship + ", "
+                        + cntct.CruInfo + ", " + cntct.Convo);
+                }
+            }
+        }
+        private void processHillenbrand()
+        {
+            foreach (Contact cntct in Hillenbrand)
+            {
+                using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(@"C:\Users\nickr\OneDrive\Documents\Visual Studio 2017\
+                                        Projects\Cru_Contact_Cards\Cru_Contact_Cards\ContactLists\Hillenbrand.txt", true))
+                {
+                    file.WriteLine(cntct.Name + ", " + cntct.Gender + ", " + cntct.Grade + ", " + cntct.Hall + ", "
+                        + cntct.Room + ", " + cntct.Religion + ", " + cntct.Race + ", " + cntct.Relationship + ", "
+                        + cntct.CruInfo + ", " + cntct.Convo);
+                }
+            }
+        }
+        private void processHilltop()
+        {
+            foreach (Contact cntct in Hilltop)
+            {
+                using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(@"C:\Users\nickr\OneDrive\Documents\Visual Studio 2017\
+                                        Projects\Cru_Contact_Cards\Cru_Contact_Cards\ContactLists\Hilltop.txt", true))
+                {
+                    file.WriteLine(cntct.Name + ", " + cntct.Gender + ", " + cntct.Grade + ", " + cntct.Hall + ", "
+                        + cntct.Room + ", " + cntct.Religion + ", " + cntct.Race + ", " + cntct.Relationship + ", "
+                        + cntct.CruInfo + ", " + cntct.Convo);
+                }
+            }
+        }
+        private void processHonors()
+        {
+            foreach (Contact cntct in Honors)
+            {
+                using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(@"C:\Users\nickr\OneDrive\Documents\Visual Studio 2017\
+                                        Projects\Cru_Contact_Cards\Cru_Contact_Cards\ContactLists\Honors.txt", true))
+                {
+                    file.WriteLine(cntct.Name + ", " + cntct.Gender + ", " + cntct.Grade + ", " + cntct.Hall + ", "
+                        + cntct.Room + ", " + cntct.Religion + ", " + cntct.Race + ", " + cntct.Relationship + ", "
+                        + cntct.CruInfo + ", " + cntct.Convo);
+                }
+            }
+        }
+        private void processMcCutcheon()
+        {
+            foreach (Contact cntct in McCutcheon)
+            {
+                using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(@"C:\Users\nickr\OneDrive\Documents\Visual Studio 2017\
+                                        Projects\Cru_Contact_Cards\Cru_Contact_Cards\ContactLists\McCutcheon.txt", true))
+                {
+                    file.WriteLine(cntct.Name + ", " + cntct.Gender + ", " + cntct.Grade + ", " + cntct.Hall + ", "
+                        + cntct.Room + ", " + cntct.Religion + ", " + cntct.Race + ", " + cntct.Relationship + ", "
+                        + cntct.CruInfo + ", " + cntct.Convo);
+                }
+            }
+        }
+        private void processMeredith()
+        {
+            foreach (Contact cntct in Meredith)
+            {
+                using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(@"C:\Users\nickr\OneDrive\Documents\Visual Studio 2017\
+                                        Projects\Cru_Contact_Cards\Cru_Contact_Cards\ContactLists\Meredith.txt", true))
+                {
+                    file.WriteLine(cntct.Name + ", " + cntct.Gender + ", " + cntct.Grade + ", " + cntct.Hall + ", "
+                        + cntct.Room + ", " + cntct.Religion + ", " + cntct.Race + ", " + cntct.Relationship + ", "
+                        + cntct.CruInfo + ", " + cntct.Convo);
+                }
+            }
+        }
+        private void processOwen()
+        {
+            foreach (Contact cntct in Owen)
+            {
+                using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(@"C:\Users\nickr\OneDrive\Documents\Visual Studio 2017\
+                                        Projects\Cru_Contact_Cards\Cru_Contact_Cards\ContactLists\Owen.txt", true))
+                {
+                    file.WriteLine(cntct.Name + ", " + cntct.Gender + ", " + cntct.Grade + ", " + cntct.Hall + ", "
+                        + cntct.Room + ", " + cntct.Religion + ", " + cntct.Race + ", " + cntct.Relationship + ", "
+                        + cntct.CruInfo + ", " + cntct.Convo);
+                }
+            }
+        }
+        private void processPville()
+        {
+            foreach (Contact cntct in Pville)
+            {
+                using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(@"C:\Users\nickr\OneDrive\Documents\Visual Studio 2017\
+                                        Projects\Cru_Contact_Cards\Cru_Contact_Cards\ContactLists\Pville.txt", true))
+                {
+                    file.WriteLine(cntct.Name + ", " + cntct.Gender + ", " + cntct.Grade + ", " + cntct.Hall + ", "
+                        + cntct.Room + ", " + cntct.Religion + ", " + cntct.Race + ", " + cntct.Relationship + ", "
+                        + cntct.CruInfo + ", " + cntct.Convo);
+                }
+            }
+        }
+        private void processShreve()
+        {
+            foreach (Contact cntct in Shreve)
+            {
+                using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(@"C:\Users\nickr\OneDrive\Documents\Visual Studio 2017\
+                                        Projects\Cru_Contact_Cards\Cru_Contact_Cards\ContactLists\Shreve.txt", true))
+                {
+                    file.WriteLine(cntct.Name + ", " + cntct.Gender + ", " + cntct.Grade + ", " + cntct.Hall + ", "
+                        + cntct.Room + ", " + cntct.Religion + ", " + cntct.Race + ", " + cntct.Relationship + ", "
+                        + cntct.CruInfo + ", " + cntct.Convo);
+                }
+            }
+        }
+        private void processTark()
+        {
+            foreach (Contact cntct in Tarkington)
+            {
+                using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(@"C:\Users\nickr\OneDrive\Documents\Visual Studio 2017\
+                                        Projects\Cru_Contact_Cards\Cru_Contact_Cards\ContactLists\Tarkington.txt", true))
+                {
+                    file.WriteLine(cntct.Name + ", " + cntct.Gender + ", " + cntct.Grade + ", " + cntct.Hall + ", "
+                        + cntct.Room + ", " + cntct.Religion + ", " + cntct.Race + ", " + cntct.Relationship + ", "
+                        + cntct.CruInfo + ", " + cntct.Convo);
+                }
+            }
+        }
+        private void processThirdStreet()
+        {
+            foreach (Contact cntct in ThirdStreet)
+            {
+                using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(@"C:\Users\nickr\OneDrive\Documents\Visual Studio 2017\
+                                        Projects\Cru_Contact_Cards\Cru_Contact_Cards\ContactLists\ThirdStreet.txt", true))
+                {
+                    file.WriteLine(cntct.Name + ", " + cntct.Gender + ", " + cntct.Grade + ", " + cntct.Hall + ", "
+                        + cntct.Room + ", " + cntct.Religion + ", " + cntct.Race + ", " + cntct.Relationship + ", "
+                        + cntct.CruInfo + ", " + cntct.Convo);
+                }
+            }
+        }
+        private void processWiley()
+        {
+            foreach (Contact cntct in Wiley)
+            {
+                using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(@"C:\Users\nickr\OneDrive\Documents\Visual Studio 2017\
+                                        Projects\Cru_Contact_Cards\Cru_Contact_Cards\ContactLists\Wiley.txt", true))
+                {
+                    file.WriteLine(cntct.Name + ", " + cntct.Gender + ", " + cntct.Grade + ", " + cntct.Hall + ", "
+                        + cntct.Room + ", " + cntct.Religion + ", " + cntct.Race + ", " + cntct.Relationship + ", "
+                        + cntct.CruInfo + ", " + cntct.Convo);
+                }
+            }
+        }
+        private void processWindsor()
+        {
+            foreach (Contact cntct in Windsor)
+            {
+                using (System.IO.StreamWriter file =
+        new System.IO.StreamWriter(@"C:\Users\nickr\OneDrive\Documents\Visual Studio 2017\
+                                        Projects\Cru_Contact_Cards\Cru_Contact_Cards\ContactLists\Windsor.txt", true))
+                {
+                    file.WriteLine(cntct.Name + ", " + cntct.Gender + ", " + cntct.Grade + ", " + cntct.Hall + ", "
+                        + cntct.Room + ", " + cntct.Religion + ", " + cntct.Race + ", " + cntct.Relationship + ", "
+                        + cntct.CruInfo + ", " + cntct.Convo);
+                }
+            }
+        }
     }
 }
